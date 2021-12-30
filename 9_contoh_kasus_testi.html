@@ -8,46 +8,53 @@
 </head>
 
 <body>
-    <h1>Slektor Luar Biasa</h1>
-    <div id="box1"></div>
+    <h1>Testimonial</h1>
 
-    <div class="boxes"></div>
-    <div class="boxes"></div>
-    <div class="boxes"></div>
-
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-    </ul>
-
-    <div id="id1">
-        <div id="id2">
-          <p>ID 2</p>
-          <span>maybe some more</span>
+    <div class="testi">
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Xenocode</b>
+                <p>Startup</p>
+            </div>
+            <div class="icon">Icon</div>
         </div>
-        <div id="id3">
-          <p>ID 3</p>
-          <span>maybe even a form item</span>
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Seno</b>
+                <p>Coba 2</p>
+            </div>
+            <div class="icon">Nico</div>
         </div>
-      </div>
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Abu Abdirohman</b>
+                <p>Percobaan</p>
+            </div>
+            <div class="icon">Coni</div>
+        </div>
+    </div>
 
     <script>
-        
-        let javascript = document.querySelector("ul li:nth-child(3)")
-        console.log(javascript)
-        let html = document.querySelector("ul li:nth-child(1)")
-        console.log(html)
+        let number = 2
+        // let testi = document.querySelector(".testi .header:nth-child(2)")
+        let testi = document.querySelectorAll(".testi .header")
+        // let testi = document.querySelector('.testi .header:nth-child(', number, ")'")
+        // console.log(testi)
 
-        let ul = document.getElementsByTagName("ul")[0]
-        console.log(ul)
-
-        // ul.appendChild(html)
-        // document.getElementsByTagName("ul")[0].appendChild(document.querySelector("ul li:nth-child(1)"))
-
-        // ul.insertBefore(html, javascript)
-
-        // document.getElementById('id1').appendChild(document.getElementById('id2'));
+        let i = testi.length-1
+        while (i >= 0) {
+            // console.log("hello")
+            // console.log("ini testi", i, testi[i])
+            const image = testi[i].querySelector(".image")
+            const cite = testi[i].querySelector(".cite")
+            console.log("image :",image)
+            console.log("cite :", cite)
+            testi[i].insertBefore(cite, image)
+            i--
+        }
 
     </script>
 
